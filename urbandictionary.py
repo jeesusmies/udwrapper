@@ -8,7 +8,7 @@ class UrbanDictionary:
     def __init__(self):
         pass
 
-    def _return_dict(parsed_json)
+    def _return_dict(self, parsed_json)
         result = {"word": parse_json[0],
                 "def": parse_json[1],
                 "date": parse_json[2],
@@ -20,7 +20,7 @@ class UrbanDictionary:
         
         return result
         
-    def _parse_json(url, page: int = None):
+    def _parse_json(self, url, page: int = None):
         if page == None:
             page = 0
         result = []
@@ -41,10 +41,10 @@ class UrbanDictionary:
         
         return result
         
-    def define(word, page: int = None):
+    def define(self, word, page: int = None):
         url = UD_URL + word
         return self._return_dict(_parse_json(url, page))
         
-    def random():
+    def random(self):
         return self._return_dict(_parse_json(UD_RANDOM_URL))
         
